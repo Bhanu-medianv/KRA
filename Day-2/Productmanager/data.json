@@ -1,0 +1,72 @@
+{
+    "products":[
+        {
+        "id":1,
+        "name":"PC",
+        "title":"asdfasdfasfaf",
+        "Price":20000,
+        "rating":3.5,
+        "threshold":10,
+        "quantities":11
+            
+    },
+    {
+        "id":2,
+        "name":"PCV",
+        "title":"asEFDGdfasdfasfaf",
+        "Price":40000,
+        "rating":5.5,
+        "threshold":10,
+        "quantities":1
+
+    },
+    {
+        "id":3,
+        "name":"PFC",
+        "title":"aFGFFGSsdfasdfasfaf",
+        "Price":30000,
+        "rating":8.5,
+        "threshold":3,
+        "quantities":2
+
+    },
+    {
+        "id":4,
+        "name":"Pd",
+        "title":"afgsdfsdfasdfasfaf",
+        "Price":3000,
+        "rating":6.5,
+        "threshold":5,
+        "quantities":4
+
+    }
+    ],
+    "Customer":[
+        {
+            "Cid":1,
+            "Name":"ram",
+            "orders_detail":{
+                "products_id":[1,2,3,4]
+            }
+        },
+        {
+            "Cid":2,
+            "Name":"shyam",
+            "orders_detail":{
+                "products_id":[1,2]
+            }
+        },{
+            "Cid":3,
+            "Name":"dhram",
+            "orders_detail":{
+                "products_id":[4]
+            }
+        },{
+            "Cid":4,
+            "Name":"shram",
+            "orders_detail":{
+                "products_id":[3,4]
+            }
+        }
+    ]
+}
