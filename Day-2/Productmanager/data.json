@@ -6,6 +6,7 @@
         "title":"asdfasdfasfaf",
         "Price":20000,
         "rating":3.5,
+        "category":"a",
         "threshold":10,
         "quantities":11
             
@@ -17,6 +18,7 @@
         "Price":40000,
         "rating":5.5,
         "threshold":10,
+        "category":"a",
         "quantities":1
 
     },
@@ -26,6 +28,7 @@
         "title":"aFGFFGSsdfasdfasfaf",
         "Price":30000,
         "rating":8.5,
+        "category":"b",
         "threshold":3,
         "quantities":2
 
@@ -37,6 +40,7 @@
         "Price":3000,
         "rating":6.5,
         "threshold":5,
+        "category":"c",
         "quantities":4
 
     }
@@ -45,28 +49,30 @@
         {
             "Cid":1,
             "Name":"ram",
-            "orders_detail":{
-                "products_id":[1,2,3,4]
-            }
+            "orders_detail":[
+                    {"pid":1 ,"quantities":2},
+                    {"pid":4,"quantities":4}
+                ]
         },
         {
             "Cid":2,
             "Name":"shyam",
-            "orders_detail":{
-                "products_id":[1,2]
-            }
+            "orders_detail":[
+                    {"pid":2 ,"quantities":2}
+                ]
         },{
             "Cid":3,
             "Name":"dhram",
-            "orders_detail":{
-                "products_id":[4]
-            }
+            "orders_detail":[
+                    {"pid":4,"quantities":2},
+                    {"pid":3,"quantities":2}
+                ]
         },{
             "Cid":4,
             "Name":"shram",
-            "orders_detail":{
-                "products_id":[3,4]
-            }
+            "orders_detail":[
+                    {"pid":3 ,"quantities":2}
+                ]
         }
     ]
 }
