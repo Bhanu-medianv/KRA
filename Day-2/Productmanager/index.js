@@ -99,6 +99,11 @@ proddata.forEach(product=>{
 
 console.log("x x x x  x x x x x x x   x x  x x  x x x")
 
+
+
+//Total revenue of the inventory
+
+
 let total = 0
 proddata.forEach(product=>{
     

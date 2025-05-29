@@ -2,8 +2,17 @@
 //     return `this is ${name}`
 // }
 // console.log(greet('bhanu'))
-
-
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 // interface User{
 //     name:string,
 //     marks:number,
@@ -17,10 +26,6 @@
 //                 apiResponse:${u.apiResponse}`
 // }
 // console.log(fun({name:'bhanu',marks:70 , isPass:true ,apiResponse:"sdfgas"}))
-
-
-
-
 // function getlength(value:unknown):Number{
 //     if(typeof value ==="string"){
 //         return value.length
@@ -28,26 +33,13 @@
 //     return 0
 // }
 // console.log(getlength("petra"))
-
-
-
-
 // function crashapp(err:string):never{
 //     throw new Error(err)
 // }
 // crashapp("this is error")          ////////////// Error always takes string//////////////
-
-
-
-
 // type User = [number , string]
 // const newsuser :User= [112, '112' ]
 // console.log(newsuser.push(2,2))
-
-
-
-
-
 // enum Seatchoice{
 //     aisle='aisle',
 //     middle='middle',
@@ -55,10 +47,6 @@
 // }
 // const seat:Seatchoice = Seatchoice.window
 // console.log(seat)
-
-
-
-
 // type Person = [string , number]
 // enum role{
 //     admin ='admin' ,
@@ -70,19 +58,10 @@
 //     ['nikhil' , 24 , role.guest]
 // ]
 // console.log(person)
-
-
-
-
 // type ID = string | number
-
 // const id:ID = 23
 // const id2:ID = 'as'
 // console.log(id , id2)
-
-
-
-
 // interface People{
 //     name:string,
 //     age:number,
@@ -90,24 +69,16 @@
 // interface Officedetails{
 //     E_id:'string',
 //     department:'string'
-    
 // }
 // type company = People & Officedetails
-
 // const detail:company = {}
-
-
-
-
-class User{
-    
-    constructor(
-        public email:string , 
-        public name:string,
-        private  role:string
-        ){
-        
+var User = /** @class */ (function () {
+    function User(email, name, role) {
+        this.email = email;
+        this.name = name;
+        this.role = role;
     }
-}
-const p1 = new User('bh@nu.com','bhanu','dev')
-console.log(p1)
+    return User;
+}());
+var p1 = new User('bh@nu.com', 'bhanu', 'dev');
+console.log(__assign({}, p1));
