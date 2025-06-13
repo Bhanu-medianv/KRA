@@ -18,5 +18,4 @@ export class teacher{
     @OneToMany(()=>metting , metting=>metting.teacher)
     metting:metting[]
 
-    
 }

@@ -21,14 +21,14 @@ export class Course {
   @JoinColumn({name:'created_by'})
   created_by: teacher;
 
-  @Column("text")
+  @Column({type:'text'})
   description: string;
 
   @CreateDateColumn()
-  created_at: Date;
+  created_on: Date;
 
   @UpdateDateColumn()
-  updated_at: Date;
+  updated_on: Date;
 
   @Column()
   version: number;

@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, ManyToOne, JoinColumn, Index } from 'typeorm';
 import { teacher } from './teacher.entity';
 import { Student } from './student.entity';
 import { group } from './groups.entity';
@@ -17,6 +17,7 @@ export class User {
   @Column()
   age:number
 
+  @Index({ unique: true })
   @Column()
   email:string
 
@@ -42,5 +43,6 @@ export class User {
   student:Student
 
   @ManyToOne(()=>group , group=>group.user)
+  @JoinColumn({name:'group_id'})
   group:group
 }

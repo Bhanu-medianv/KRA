@@ -40,6 +40,6 @@ export class metting{
     @OneToOne(()=>recording  , recording=>recording.metting)
     recording:recording
 
-    @OneToMany(()=>st_meet, st_meet=>st_meet.metting)
+    @OneToMany(()=>st_meet, st_meet=>st_meet.meeting)
     st_meet:st_meet[]
 }
