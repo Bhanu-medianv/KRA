@@ -1,13 +1,18 @@
+import { Student } from "src/users/entities/student.entity";
 import { teacher } from "src/users/entities/teacher.entity";
 import {
   Column,
   CreateDateColumn,
   Entity,
   JoinColumn,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from "typeorm";
+import { modulesEntity } from "./module.entities";
 
 @Entity("courses")
 export class Course {
@@ -44,4 +49,10 @@ export class Course {
 
   @Column()
   category: string;
+
+  @ManyToMany(() => Student, student => student.courses)
+  students: Student[]
+
+  @OneToMany(()=>modulesEntity , modulesEntity=>modulesEntity.course)
+  modules:modulesEntity[]
 }

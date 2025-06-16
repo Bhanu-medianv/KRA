@@ -36,10 +36,10 @@ export class User {
   @Column({type:'timestamptz'})
   updated_at:Date
 
-  @OneToOne(()=>teacher , teacher=>teacher.user_id)
+  @OneToOne(()=>teacher , teacher=>teacher.user)
   teacher:teacher
 
-  @OneToOne(()=>Student,Student=>Student.user_id)
+  @OneToOne(()=>Student,Student=>Student.user)
   student:Student
 
   @ManyToOne(()=>group , group=>group.user)

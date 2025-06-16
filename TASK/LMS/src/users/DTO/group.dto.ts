@@ -2,7 +2,7 @@ import { IsInt, IsString } from 'class-validator';
 
 export class CreateGroupDto {
   @IsInt()
-  user_id: number;
+  group_id: number;
 
   @IsString()
   group_name: string;
