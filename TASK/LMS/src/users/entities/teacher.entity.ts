@@ -10,7 +10,7 @@ export class teacher{
     
     @OneToOne(()=>User , user=>user.teacher )
     @JoinColumn({name:"user_id"})
-    user_id:User
+    user:User
 
     @OneToOne(()=>Course ,course=>course.created_by)
     course:Course

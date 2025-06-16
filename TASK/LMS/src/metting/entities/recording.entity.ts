@@ -7,9 +7,6 @@ export class recording{
     record_id:number
 
     @Column()
-    meeting_id:number
-
-    @Column()
     file_url:string
 
     @Column({type:'timestamptz'})

@@ -6,8 +6,6 @@ export class group{
    @PrimaryGeneratedColumn()
     group_id:number
     
-    @Column()
-    user_id:number
 
     @Column()
     group_name:string

@@ -10,11 +10,4 @@ export class st_meet {
     @PrimaryColumn()
     meeting_id: number;
 
-    @ManyToOne(() => Student, student => student.meetings)
-    @JoinColumn({ name: 'student_id' })
-    student: Student;
-
-    @ManyToOne(() => metting, meeting => meeting.st_meet)
-    @JoinColumn({ name: 'meeting_id' })
-    meeting: metting;
 }

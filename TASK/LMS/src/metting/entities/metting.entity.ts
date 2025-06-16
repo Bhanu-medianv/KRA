@@ -1,7 +1,8 @@
 import { teacher } from "src/users/entities/teacher.entity";
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import { Column, Entity, JoinColumn, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 import { recording } from "./recording.entity";
 import { st_meet } from "src/users/entities/st_meet.entity";
+import { Student } from "src/users/entities/student.entity";
 
 
 @Entity()
@@ -9,8 +10,6 @@ export class metting{
    @PrimaryGeneratedColumn()
     metting_id:number
 
-    @Column()
-    host_id:number
 
     @Column()
     meeting_url:string
@@ -40,6 +39,6 @@ export class metting{
     @OneToOne(()=>recording  , recording=>recording.metting)
     recording:recording
 
-    @OneToMany(()=>st_meet, st_meet=>st_meet.meeting)
-    st_meet:st_meet[]
+    @ManyToMany(() => Student, student => student.meetings)
+    students: Student[];
 }
